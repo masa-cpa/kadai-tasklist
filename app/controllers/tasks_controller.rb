@@ -51,7 +51,7 @@ class TasksController < ApplicationController
   def set_task
 #    @task = Task.find(params[:id]) →全てのタスクからこのIDを見つけてくる
 # => 下記はカレントユーザーが作成したタスクのなかからIDを見つけてくる
-    @task = currrnt.user.tasks.find_by(id: params[:id])
+    @task = currrent.user.tasks.find_by(id: params[:id])
     unless @task
       redirect_to root_url
     end
